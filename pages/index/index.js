@@ -29,7 +29,8 @@ Page({
     }],
     activeIndex: 0,
     sliderOffset: 0,
-    sliderLeft: 0
+    sliderLeft: 0,
+    category: 'gn'
   },
   onLoad() {
     wx.getSystemInfo({
@@ -40,7 +41,7 @@ Page({
         });
       }
     });
-    this.getNews('gn')
+    this.getNews(this.data.category)
   },
   getNews(category,cb) {
     category && wx.request({
@@ -72,12 +73,20 @@ Page({
       url: `/pages/detail/detail?id=${e.currentTarget.id}`,
     })
   },
+  onPullDownRefresh() {
+    this.getNews(this.data.category, () => {
+      wx.stopPullDownRefresh()
+    })
+  },
   tabClick: function (e) {
     console.log(e)
     this.setData({
       sliderOffset: e.currentTarget.offsetLeft,
       activeIndex: e.currentTarget.id
     });
+    this.setData({
+      category: e.target.dataset.name
+    })
     this.getNews(e.target.dataset.name)
   }
 });
