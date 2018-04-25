@@ -4,14 +4,27 @@
             <view class="weui-navbar">
                 <block wx:for="{{tabs}}" wx:key="*this">
                     <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
-                        <view class="weui-navbar__title">{{item}}</view>
+                        <view class="weui-navbar__title" data-name="{{item.shortName}}">{{item.name}}</view>
                     </view>
                 </block>
                 <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
             </view>
             <view class="weui-tab__panel">
               <view class="weui-tab__content">
-                
+                <view class="container">
+                  <view class="content" wx:for="{{content}}" wx:key="*this" bindtap='linkToDetail' id="{{item.id}}" >
+                    <view id="{{item.id}}" class="info">
+                      <view class="title">{{item.title}}</view>
+                      <view class="footer">
+                        <view class="time">{{item.date}}</view>
+                        <view class="source">{{item.source}}</view>
+                      </view>
+                    </view>
+                    <view class="pic">
+                      <image src="{{item.firstImage}}" mode="scaleToFill"></image>
+                    </view>
+                  </view>
+                </view>
               </view>
             </view>
         </view>

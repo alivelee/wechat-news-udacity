@@ -1,0 +1,27 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">{{title}}</view>
+        <view class="page__desc">
+          <view class="date">{{date}}</view>
+          <view class="readCount">阅读量：{{readCount}}</view>
+        </view>
+    </view>
+    <view>
+      <!-- <image src="{{img}}" class="first-image"></image> -->
+    </view>
+    <view class="page__bd">
+        <view class="weui-article" wx:for="{{content}}" wx:key="{{item.id}}">
+            <view class="weui-article__title" wx:if="{{item.type == 'strong'}}">{{item.text}}</view>
+            <view class="weui-article__section">
+                <view class="weui-article__section">
+                    <view class="weui-article__p" wx:if="{{item.type == 'p'}}">
+                      {{item.text}} 
+                    </view>
+                    <view class="weui-article__p">
+                      <image class="weui-article__img" src="{{item.src}}" mode="aspectFit" style="height: 180px" wx:if="{{item.type == 'image'}}"/>                    
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

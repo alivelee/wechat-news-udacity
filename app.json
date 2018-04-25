@@ -1,12 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/list/list"
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#cbeefd",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "新闻小程序",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   }
