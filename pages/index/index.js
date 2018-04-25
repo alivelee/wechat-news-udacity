@@ -1,4 +1,3 @@
-// pages/index/index.js
 const sliderWidth = 56; // 需要设置slider的宽度，用于计算中间位置
 const baseURl = `https://test-miniprogram.com/api/news`
 

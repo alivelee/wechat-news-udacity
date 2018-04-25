@@ -7,7 +7,6 @@
         </view>
     </view>
     <view>
-      <!-- <image src="{{img}}" class="first-image"></image> -->
     </view>
     <view class="page__bd">
         <view class="weui-article" wx:for="{{content}}" wx:key="{{item.id}}">
