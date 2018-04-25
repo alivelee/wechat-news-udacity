@@ -20,8 +20,8 @@
                         <view class="source">{{item.source}}</view>
                       </view>
                     </view>
-                    <view class="pic">
-                      <image src="{{item.firstImage}}" mode="scaleToFill"></image>
+                    <view>
+                      <image src="{{item.firstImage}}" mode="aspectFill" class="pic"></image>
                     </view>
                   </view>
                 </view>

@@ -10,6 +10,42 @@ page,
     padding-bottom: 0;
 }
 .weui-tab__content{
-    padding-top: 60px;
+    padding-top: 30rpx;
     text-align: center;
+}
+
+.weui-navbar {
+  background: white;
+}
+
+.info,
+.content {
+  display: flex;
+}
+.info {
+  flex-wrap: wrap;
+  text-align: left;
+  flex-direction: column;
+  flex-basis: 400rpx;
+}
+.pic {
+  width: 300rpx;
+  height: 200rpx;
+  object-fit: contain;
+}
+.time,
+.source {
+  font-size: 11px;
+  color: #B0B1A8;
+  display: inline-block;
+  margin-right: 5px;
+}
+.title {
+  font-size: 14px;
+}
+.content {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 5px 10px 5px;
+  border-bottom: 1px solid lightgray
 }
