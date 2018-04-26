@@ -81,11 +81,9 @@ Page({
     console.log(e)
     this.setData({
       sliderOffset: e.currentTarget.offsetLeft,
-      activeIndex: e.currentTarget.id
-    });
-    this.setData({
+      activeIndex: e.currentTarget.id,
       category: e.target.dataset.name
-    })
+    });
     this.getNews(e.target.dataset.name)
   }
 });
