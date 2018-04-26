@@ -17,8 +17,6 @@ Page({
       },
       success: res => {
         let { result } = res.data;
-        console.log(result)
-        
         this.setData({
           date: formatTime(new Date(result.date)),
           img: result.firstImage,

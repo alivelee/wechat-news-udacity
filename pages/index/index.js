@@ -59,7 +59,6 @@ Page({
         this.setData({
           content: processData
         })
-        console.log(result)
       },
       complete: () => {
         cb && cb()
@@ -67,7 +66,6 @@ Page({
     })
   },
   linkToDetail(e) {
-    console.log(e)
     wx.navigateTo({
       url: `/pages/detail/detail?id=${e.currentTarget.id}`,
     })
@@ -78,7 +76,6 @@ Page({
     })
   },
   tabClick: function (e) {
-    console.log(e)
     this.setData({
       sliderOffset: e.currentTarget.offsetLeft,
       activeIndex: e.currentTarget.id,
