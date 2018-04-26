@@ -21,7 +21,7 @@
                 </view>
               </view>
               <view>
-                <image src="{{item.firstImage}}" mode="aspectFill" class="pic"></image>
+                <image src="{{item.firstImage}}" mode="aspectFill" class="pic" wx:if="{{item.firstImage}}"></image>
                 <image src="../../images/pic_article.png" mode="aspectFill" class="pic" wx:if="{{!item.firstImage}}"></image>
               </view>
             </view>
